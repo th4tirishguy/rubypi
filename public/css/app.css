@@ -1,0 +1,9 @@
+nav.top-bar {
+	background-color: #912e2e;
+}
+nav.top-bar section.top-bar-section ul.right li a {
+	background-color: #912e2e;
+}
+nav.top-bar section.top-bar-section ul.right li a:hover {
+	background-color: #6f1919;
+}
