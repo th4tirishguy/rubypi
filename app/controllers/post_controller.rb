@@ -1,6 +1,10 @@
 class PostController < ApplicationController
   def new
-  	@post = Post.new
+    if !session[:logged_in].nil? && session[:user_access_level] == 1
+  	 @post = Post.new
+    else
+      redirect_to :root
+    end
   end
 
   def create

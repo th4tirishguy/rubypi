@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   root 'static_page#home'
 
-  #pages for the blog and posts
-  get 'post/new'
+  #routes for the blog and posts
+  get 'blog/new_post' => 'post#new'
 
   post 'new_post' => 'post#create', :as => 'new_post'
 
@@ -18,10 +18,17 @@ Rails.application.routes.draw do
   get '/contact' => 'static_page#contact'
 
 
-  #pages for signup
-  get '/signup' => 'user#new'
+  #routes for signup. Commented out to prevent random people creating accounts
+  # get '/signup' => 'user#new'
 
-  post '/signup' => 'user#create', :as => 'sign_up'
+  # post '/signup' => 'user#create', :as => 'sign_up'
+
+  #routes for sessions
+  get '/login' => 'session#new'
+
+  post '/login' => 'session#create', :as => 'log_in'
+
+  get '/logout' => 'session#destroy', :as => 'log_out'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

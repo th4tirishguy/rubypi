@@ -1,20 +1,18 @@
-<h3>Signup</h3>
-<%= form_for sign_up_path do |f| %>
+<h3>Login</h3>
+<%= form_for log_in_path do |f| %>
 	<div class="row">
 		<div class="large-12 columns">
 			<%= f.label :username %>
 			<%= f.text_field :username %>
 		</div>
-		<div class="large-12 columns">
-			<%= f.label :email %>
-			<%= f.email_field :email %>
-		</div>
+
 		<div class="large-12 columns">
 			<%= f.label :password %>
 			<%= f.password_field :password %>
 		</div>
+
 		<div class="large-12 columns">
-			<%= f.submit :Signup, :class => "button small" %>
+			<%= f.submit :Login, :class => "button small" %>
 		</div>
 	</div>
 <% end %>
