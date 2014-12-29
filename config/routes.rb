@@ -1,17 +1,27 @@
 Rails.application.routes.draw do
+
+  root 'static_page#home'
+
+  #pages for the blog and posts
   get 'post/new'
 
   post 'new_post' => 'post#create', :as => 'new_post'
 
   get 'blog/:slug' => 'post#show', :as => 'post'
 
-  root 'static_page#home'
-
+  
+  #static pages
   get '/project' => 'static_page#project'
 
   get '/hardware' => 'static_page#hardware'
 
   get '/contact' => 'static_page#contact'
+
+
+  #pages for signup
+  get '/signup' => 'user#new'
+
+  post '/signup' => 'user#create', :as => 'sign_up'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

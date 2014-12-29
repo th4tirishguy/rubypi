@@ -18,6 +18,5 @@ class PostController < ApplicationController
 
   def show
   	@post = Post.find_by(slug: params[:slug])
-  	@markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 end

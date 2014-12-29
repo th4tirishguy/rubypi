@@ -1,0 +1,20 @@
+<h3>Signup</h3>
+<%= form_for sign_up_path, :data => 'data-abide' do |f| %>
+	<div class="row">
+		<div class="large-12 columns">
+			<%= f.label :username %>
+			<%= f.text_field :username %>
+		</div>
+		<div class="large-12 columns">
+			<%= f.label :email %>
+			<%= f.email_field :email %>
+		</div>
+		<div class="large-12 columns">
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
+		<div class="large-12 columns">
+			<%= f.submit :Signup, :class => "button small" %>
+		</div>
+	</div>
+<% end %>
