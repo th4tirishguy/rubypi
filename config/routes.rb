@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'post/new'
+
+  post 'new_post' => 'post#create', :as => 'new_post'
+
+  get 'blog/:slug' => 'post#show', :as => 'post'
+
   root 'static_page#home'
 
   get '/project' => 'static_page#project'
