@@ -7,3 +7,6 @@ nav.top-bar section.top-bar-section ul.right li a {
 nav.top-bar section.top-bar-section ul.right li a:hover {
 	background-color: #6f1919;
 }
+nav.top-bar.expanded ul.title-area {
+	background-color: #912e2e;
+}

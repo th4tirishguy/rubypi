@@ -4,7 +4,7 @@
 	<%= f.text_field :title %></br>
 
 	<%= f.label :body %></br>
-	<%= f.text_area :body %></br>
+	<%= f.text_area :body, :rows => 9 %></br>
 
-	<%= f.submit :save %>
+	<%= f.submit :save, :class => "button small" %>
 <% end %>
